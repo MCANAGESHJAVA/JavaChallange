@@ -1,3 +1,9 @@
+package com.taodigitalsolutions.retail.model;
+
+import javax.persistence.*;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
 @Entity
 public class Product {
     @Id
@@ -16,6 +22,19 @@ public class Product {
 
     @Column(nullable = false)
     private LocalDateTime postedDate;
+
+
+
+    public Product() {
+
+    }
+
+    public Product(String name, BigDecimal price, ProductStatus status, LocalDateTime postedDate) {
+        this.name = name;
+        this.price = price;
+        this.status = status;
+        this.postedDate = postedDate;
+    }
 
     public Long getId() {
         return id;

@@ -1,3 +1,5 @@
+package com.taodigitalsolutions.retail.model;
+
 @Entity
 public class ApprovalQueue {
     @Id
